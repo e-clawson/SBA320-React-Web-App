@@ -1,9 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-export default function login() {
-    const [email, setEmail] = useState('')
-    const [password,setPassword] = useState('')
+export default function login({email, password}) {
 
     //need to add some fuctions here to do the following: 
     //1 - check that the email and password are in the correct format 
@@ -14,7 +12,7 @@ export default function login() {
     return (
     <div>
         <h4>Log-In:</h4>
-        <div classname="signinForm">
+        <div className="signinForm">
             <input
             value={email}
             placeholder="enter your email"

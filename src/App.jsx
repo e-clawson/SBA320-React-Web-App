@@ -7,12 +7,13 @@ import AddTask from './components/tasks/addTask'
 
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [email, setEmail] = useState('')
+  const [password,setPassword] = useState('')
+  
   return (
     <>
     < Header />
-    < Login />
+    < Login email={email} password={password}/>
     < AddTask />
     </>
   )
