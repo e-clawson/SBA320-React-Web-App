@@ -18,14 +18,12 @@ export default function login() {
             <input
             value={email}
             placeholder="enter your email"
-            className={'inputBox'}
             >
             </input>
             <br></br>
             <input
             value={password}
             placeholder="password"
-            className={'inputBox'}
             >
             </input>
             <br></br>
