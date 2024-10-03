@@ -7,7 +7,7 @@
     background: white;
     padding-bottom: 30px;
     border-radius: 25px;
-
+    width: 600px;
 }
 
 .header{
@@ -25,8 +25,8 @@
     font-weight: 700;
 }
 
-.signinForm{
-    margin-top: 55px;
+.sign-in-form{
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -54,4 +54,39 @@
     outline: none;
     color: #797979;
     font-size: 19px;
+}
+
+.forgot-password{
+    color: #797979;
+    font-size: 18px;
+}
+
+.forgot-password span{
+    color: #5e07d7;
+    cursor: pointer;
+}
+
+.submit-container{
+    display: flex;
+    gap: 30px;
+    margin: 40px auto;
+}
+
+.submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 59px;
+    color: #fff;
+    background: darkslategray;
+    border-radius: 50px;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.gray{
+    background: #eaeaea;
+    color: #676767;
 }
