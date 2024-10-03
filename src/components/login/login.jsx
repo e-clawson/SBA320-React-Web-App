@@ -1,7 +1,12 @@
 import React from "react";
 import { useState } from "react";
+import "./login.css"
 
-export default function login({email, password}) {
+import email_img from "../../assets/email.png"
+import password_img from "../../assets/password.png"
+import person_img from "../../assets/person.png"
+
+export default function login({name, email, password}) {
 
     //need to add some fuctions here to do the following: 
     //1 - check that the email and password are in the correct format 
@@ -10,27 +15,49 @@ export default function login({email, password}) {
     //3- login the user 
 
     return (
-    <div>
-        <h4>Log-In:</h4>
+    <div className="container">
+        <div className="header">
+        <div className="text">Log-In</div>
+        </div>
         <div className="signinForm">
-            <input
-            value={email}
-            placeholder="enter your email"
-            >
-            </input>
-            <br></br>
-            <input
-            value={password}
-            placeholder="password"
-            >
-            </input>
-            <br></br>
+            <div className="input">
+                <img src={person_img} alt=""/>
+                <input
+                value={name}
+                placeholder="First Name"
+                ></input>
+            </div>
+            <div className="input">
+                <img src={email_img} alt=""/>
+                <input
+                value={email}
+                placeholder="Email Address"
+                ></input>
+            </div>
+            <div className="input">
+                <img src={password_img} alt=""/>
+                <input
+                value={password}
+                placeholder="Password"
+                ></input>
+            </div>
+        <div className="submit-container">
+            <div className="submit">Sign Up</div>
+            <div className="submit">Log In</div>
+            <div className="forgotPassword">Forgot Password? <span>Click Here</span></div>
             <input
             type="button"
             value={'Log In'}
             className={'loginButton'}
             >
             </input>
+            <input
+            type="button"
+            value={'Sign Up'}
+            className={'signUpButton'}
+            >
+            </input>
+        </div>
         </div>
         
     </div>
