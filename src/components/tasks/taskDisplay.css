@@ -1,0 +1,36 @@
+.task-container{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin-top: 50px;
+        background: white;
+        padding-bottom: 30px;
+        border-radius: 25px;
+        width: 800px;
+}
+.task-display{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    gap: 30px;
+    /* margin-top: 50px; */
+    background: white;
+    padding-bottom: 30px;
+    border-radius: 25px;
+    width: 600px;
+}
+.task-card{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    /* margin-top: 50px; */
+    background: rgb(236, 158, 237);
+    padding: 10px;
+    border-radius: 25px;
+    width: 600px;
+    gap: 10px;
+}
+
+.button {
+    padding: 5px;
+}
