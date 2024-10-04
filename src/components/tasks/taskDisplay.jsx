@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import AddTask from './addTask';
 import './taskDisplay.css'
 
 export default function TaskDisplay({todos, setTodos}) {
@@ -29,6 +28,8 @@ export default function TaskDisplay({todos, setTodos}) {
           )
         );
       };
+      //need to figure out how to update this to change the item to complete, and to turn the view off
+      //reach goal and add it to the counter 
 
       const handleEditClick = (id, text) => {
         setIsEditing(true);
