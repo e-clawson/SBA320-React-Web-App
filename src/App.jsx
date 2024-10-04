@@ -5,6 +5,7 @@ import Header from './components/header'
 // import Login from "./components/Login/login"
 // import AddTask from './components/tasks/addTask'
 import TaskDisplay from './components/tasks/taskDisplay'
+import AddTask from './components/tasks/addTask';
 
 
 
@@ -20,7 +21,7 @@ function App() {
       );
       const data = await response.json();
       const todoData = data.todos
-      console.log( )
+      console.log(todoData)
       setTodos(todoData); 
     } catch(e) {
       console.error(e)
@@ -29,14 +30,13 @@ function App() {
   useEffect(() => {
     getToDos();
     console.log(todos)
-    console.log(typeof todos)
   }, []);
 
 
    return (
     <>
     <Header />
-    <TaskDisplay todos={todos}/>
+    <TaskDisplay todos={todos} setTodos={setTodos}/>
     </>
   )
   
