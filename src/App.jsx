@@ -2,16 +2,13 @@ import {useEffect, useState } from 'react'
 // import { Route, Routes, Link } from 'react-router-dom'
 import './App.css'
 import Header from './components/header'
-// import Login from "./components/Login/login"
-// import AddTask from './components/tasks/addTask'
+import Login from "./components/login/Login"
 import TaskDisplay from './components/tasks/taskDisplay'
-import AddTask from './components/tasks/addTask';
-
 
 
 function App() {
   // const [userAuth, setUserAuth] = useState(null)
-  // const [currentUser, setCurrentUser] = useState({})
+  const [currentUser, setCurrentUser] = useState({})
   const [todos, setTodos] = useState([]);
 
   const getToDos = async() =>{
@@ -36,6 +33,7 @@ function App() {
    return (
     <>
     <Header />
+    <Login currentUser={currentUser} setCurrentUser={setCurrentUser}/>
     <TaskDisplay todos={todos} setTodos={setTodos}/>
     </>
   )

@@ -19,9 +19,9 @@ Once you have an idea for your project, keeping the below requirements and resou
 # Requirements
 
 Your application must meet these requirements to pass (this it your Minimum Viable Product):
-1. Built with HTML, CSS, JavaScript, and REACT. 
+1. Built with HTML, CSS, JavaScript, and REACT. (done)
 2. Hosted on Heroku or Netlify.
-3. Frequent commits to GitHub.
+3. Frequent commits to GitHub. (done)
 4. A README.md file in your GitHub repository with:
     - Explanations of the technologies used.
     - Explanations of the approach taken. 
@@ -29,7 +29,7 @@ Your application must meet these requirements to pass (this it your Minimum Viab
     - Usage instructions, if relevant.
     - Unsolved problems. 
     - etc.
-5. Use AJAX to make a request to an external data source like OMDBapi, and insert some of the data retrieved into the DOM.
+5. Use AJAX to make a request to an external data source like OMDBapi, and insert some of the data retrieved into the DOM. (grabbed todo info from external API to show on the page)
 
 # Bonus Features 
 - use Redux Toolkit.

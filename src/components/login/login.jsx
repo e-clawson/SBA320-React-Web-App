@@ -25,6 +25,8 @@ export default function Login({currentUser, setCurrentUser}) {
                 console.log("login successful")
                 console.log(user)
                 setCurrentUser(user)
+                //currently getting to this point - need to use current user to set the homepage 
+                //and load specific tasks 
                 //add navigvation to homepage here
             } else {
                 setError("Invalid Username or Password")
