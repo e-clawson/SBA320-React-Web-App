@@ -6,7 +6,7 @@ import Header from './components/header'
 import Login from './components/login/Login.jsx' 
 import TaskDisplay from './components/tasks/taskDisplay'
 import TaskCounter from './components/tasks/TaskCounter.jsx'
-// import Signout from "./components/login/signout.jsx"
+import Signout from "./components/login/signout.jsx"
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null)
@@ -43,7 +43,7 @@ function App() {
       <>
       <TaskCounter />
       <TaskDisplay todos={todos} setTodos={setTodos}/>
-      {/* <Signout /> */}
+      <Signout />
       </>
     ) : <Login />}
     </>

@@ -3,10 +3,10 @@ import { useContext } from "react";
 import CurrentUserContext from "../../user-context";
 
 export default function Signout() {
-    const [user, setUser] = useContext(CurrentUserContext);
+    const {currentUser, setCurrentUser } = useContext(CurrentUserContext)
 
     const signout = () => {
-        setUser(null)
+        setCurrentUser(null)
     }
 
     return(
