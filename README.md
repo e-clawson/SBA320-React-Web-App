@@ -1,4 +1,6 @@
 # SBA 320H - React Web Application Project
+To see a Live Deployed site, please visit the following link: 
+https://zesty-yeot-8b2b8e.netlify.app/
 
 # About 
  My goal with this project was to make a to-do list that was more in-depth than some of the examples I have seen so far. My goal is to eventually include the following: 
