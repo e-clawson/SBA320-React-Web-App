@@ -11,9 +11,7 @@ export default function Signout() {
 
     return(
         <>
-        {user !== null ? (
-            <button onClick={signout}>Sign Out</button>
-        ) : <></>}
+        <button onClick={signout}>Sign Out</button>
         </>
         
     )
