@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useContext } from "react";
 import "./login.css"
-import { CurrentUserContext } from "../../user-context";
+import CurrentUserContext from "../../user-context";
 import email_img from "../../assets/email.png"
 import password_img from "../../assets/password.png"
 import person_img from "../../assets/person.png"
@@ -12,6 +12,7 @@ export default function Login() {
     const [email, setEmail] = useState('')
     const [password,setPassword] = useState('')
     const [firstName, setFirstName] = useState('')
+    const [error, setError] = useState('')
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -23,14 +24,14 @@ export default function Login() {
                 (u) => u.email === email && u.password === password
             );
             if (user) {
-                console.log("login successful")
-                console.log(user)
                 setCurrentUser(user)
+                console.log(currentUser)
                 //currently getting to this point - need to use current user to set the homepage 
                 //and load specific tasks 
                 //add navigvation to homepage here
             } else {
-                setError("Invalid Username or Password")
+                console.log("Invalid Username or Password")
+                
             }
         }) 
     }
@@ -74,20 +75,7 @@ export default function Login() {
             <div className="submit-container">
                 <button className={action === "Log In" ? "submit gray" : "submit"} onClick={() => {setAction("Sign Up")}} type="submit">Sign Up</button>
                 <button className={action === "Sign Up" ? "submit gray" : "submit"} onClick={() => {setAction("Log In")}}>Log In</button>
-           
-            {/* <input
-            type="button"
-            value={'Log In'}
-            className={'loginButton'}
-            > */}
-            {/* </input>
-            <input
-            type="button"
-            value={'Sign Up'}
-            className={'signUpButton'}
-            >
-            </input> */}
-        </div>
+            </div>
         </form>
         </div> 
         {action === "Sign Up" ? <div></div> : <div className="forgot-password">Forgot Password? <span>Click Here</span></div> }
