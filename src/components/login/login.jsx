@@ -1,12 +1,13 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import "./login.css"
-
+import { CurrentUserContext } from "../../App";
 import email_img from "../../assets/email.png"
 import password_img from "../../assets/password.png"
 import person_img from "../../assets/person.png"
 
-export default function Login({currentUser, setCurrentUser}) {
+export default function Login() {
+    const {currentUser, setCurrentUser } = useContext(CurrentUserContext)
     const [action, setAction] = useState("Sign Up")
     const [email, setEmail] = useState('')
     const [password,setPassword] = useState('')
@@ -40,7 +41,7 @@ export default function Login({currentUser, setCurrentUser}) {
         <div className="text">{action}</div>
         </div>
         <div >
-            <form className="sign-in-form" onSubmit={handleSubmit}>
+            <form className="sign-in-form" onSubmit={handleSubmit} >
             {action === "Log In" ? <div></div> :  <div className="input">
                 <img src={person_img} alt=""/>
                 <input

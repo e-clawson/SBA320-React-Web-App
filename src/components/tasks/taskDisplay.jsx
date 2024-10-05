@@ -55,7 +55,7 @@ export default function TaskDisplay({todos, setTodos}) {
      return (
         <>
         <div className="add-task">
-            <input
+            <input className='task-input'
             type="text"
             placeholder="Add a Task!"
             value={newTodo}
