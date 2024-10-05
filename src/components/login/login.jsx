@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useContext } from "react";
 import "./login.css"
-import { CurrentUserContext } from "../../App";
+import { CurrentUserContext } from "../../user-context";
 import email_img from "../../assets/email.png"
 import password_img from "../../assets/password.png"
 import person_img from "../../assets/person.png"

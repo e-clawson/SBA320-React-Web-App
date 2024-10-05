@@ -1,12 +1,13 @@
 import {useEffect, useState, createContext, useContext } from 'react'
 // import { Route, Routes, Link } from 'react-router-dom'
+import CurrentUserContext from "./user-context.jsx"
 import './App.css'
 import Header from './components/header'
 import Login from "./components/login/Login.jsx"
 import TaskDisplay from './components/tasks/taskDisplay'
 import TaskCounter from './components/tasks/TaskCounter.jsx'
 
-export const CurrentUserContext = createContext(null);
+
 
 function App() {
   const [currentUser, setCurrentUser] = useState([null])
