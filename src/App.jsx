@@ -6,9 +6,10 @@ import Header from './components/header'
 import Login from "./components/login/Login.jsx"
 import TaskDisplay from './components/tasks/taskDisplay'
 import TaskCounter from './components/tasks/TaskCounter.jsx'
+import Signout from "./components/login/signout.jsx"
 
 function App() {
-  const [currentUser, setCurrentUser] = useState([null])
+  const [currentUser, setCurrentUser] = useState(null)
   const [todos, setTodos] = useState([]);
 
   const getToDos = async() =>{
@@ -31,20 +32,19 @@ function App() {
   useEffect(() => {
     getToDos(currentUser);
     console.log(todos)
-  }, []);
+  }, [currentUser]);
 
    return (
     <>
     <CurrentUserContext.Provider value={{currentUser, setCurrentUser}}>
     <Header />
-    <Login />
     <>
-    {/* {currentUser !== null && todos !== null ? (
+    {currentUser !== null ? (
       <>
       <TaskCounter />
       <TaskDisplay todos={todos} setTodos={setTodos}/>
       </>
-    ) : ''} */}
+    ) : <Login />}
     </>
     </CurrentUserContext.Provider>
     </>

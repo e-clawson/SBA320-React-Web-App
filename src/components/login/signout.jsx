@@ -1,10 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { useContext } from "react";
-import { CurrentUserContext } from "../../user-context";
+import CurrentUserContext from "../../user-context";
 
 export default function Signout() {
-    const [user, setUser] = useContext(CurrentUserContext)
+    const [user, setUser] = useContext(CurrentUserContext);
 
     const signout = () => {
         setUser(null)
@@ -14,7 +13,7 @@ export default function Signout() {
         <>
         {user !== null ? (
             <button onClick={signout}>Sign Out</button>
-        ) : ''}
+        ) : <></>}
         </>
         
     )

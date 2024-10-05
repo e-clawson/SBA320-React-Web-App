@@ -1,11 +1,24 @@
 # SBA 320H - React Web Application Project
 
 # About 
+ My goal with this project was to make a to-do list that was more in-depth than some of the examples I have seen so far. My goal is to eventually include the following: 
+    - be able to log in 
+    - be able to add, edit and delete todos
+    - be able to add sub tasks to todo items with checkboxes 
+    - track overall completed tasks with a completed task counter
+    - be able to create your own task bins or columns and be able to drag and drop items into different columns 
+
+To satisfy the project requirements, I have also used the dummyJSON API to provide user data 
+
+due to time constraints, I was not able to implement all the things I wanted, but I am looking forward to continuing to work on this project to make it work. 
 
 # Dependencies 
+this project uses to following dependencies: 
+- react-router-dom 
 
 # Installation 
-
+to install this project please follow these steps: 
+- 
 
 --- below are the instructions for this project from Per Scholas --- 
 
