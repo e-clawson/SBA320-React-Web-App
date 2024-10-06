@@ -12,7 +12,7 @@ export default function Login() {
     const [email, setEmail] = useState('')
     const [password,setPassword] = useState('')
     const [firstName, setFirstName] = useState('')
-    const [error, setError] = useState('')
+    // const [error, setError] = useState('')
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -25,15 +25,40 @@ export default function Login() {
             );
             if (user) {
                 setCurrentUser(user)
-                console.log(currentUser)
-                //currently getting to this point - need to use current user to set the homepage 
-                //and load specific tasks 
-                //add navigvation to homepage here
+                // console.log(currentUser)
             } else {
                 console.log("Invalid Username or Password")
-                
             }
         }) 
+    }
+
+    const handleSignUp = (e) => {
+        e.preventDefault(); 
+        console.log(e.target.value)
+
+        fetch('https://dummyjson.com/users/add', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              firstName: firstName,
+              email: email,
+              password: password,
+              /* other user data */
+            })
+          })
+          .then(res => res.json())
+          .then(console.log);
+          const newUser = response.json()
+          setCurrentUser(newUser)
+          console.log('made it to post -new user', currentUser)
+    }
+
+    const handleForm = (e) => {
+        if (action === "signup") {
+            handleSignUp()
+        } else {
+            handleSubmit()
+        }
     }
 
     return (
@@ -42,7 +67,7 @@ export default function Login() {
         <div className="text">{action}</div>
         </div>
         <div >
-            <form className="sign-in-form" onSubmit={handleSubmit} >
+            <form className="sign-in-form" onSubmit={handleSubmit}>
             {action === "Log In" ? <div></div> :  <div className="input">
                 <img src={person_img} alt=""/>
                 <input
@@ -78,7 +103,7 @@ export default function Login() {
             </div>
         </form>
         </div> 
-        {action === "Sign Up" ? <div></div> : <div className="forgot-password">Forgot Password? <span>Click Here</span></div> }
+        {/* {action === "Sign Up" ? <div></div> : <div className="forgot-password">Forgot Password? <span>Click Here</span></div> } */}
     </div>
     )
 }
