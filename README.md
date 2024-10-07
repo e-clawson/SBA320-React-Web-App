@@ -10,6 +10,8 @@ https://zesty-yeot-8b2b8e.netlify.app/
     - track overall completed tasks with a completed task counter
     - be able to create your own task bins or columns and be able to drag and drop items into different columns 
 
+    This project utilizes data from the DUMMYJSON API - https://dummyjson.com/docs/todos
+
 To satisfy the project requirements, I have also used the dummyJSON API to provide user data 
      - to test the app - please use the following login credentials : email: emily.johnson@x.dummyjson.com, password - emilyspass
 
