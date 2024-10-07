@@ -2,15 +2,16 @@ import {useEffect, useState } from 'react'
 // import { Route, Routes, Link } from 'react-router-dom'
 import CurrentUserContext from "./user-context.jsx"
 import './App.css'
-import Header from './components/header'
+// import Header from './components/header'
 import Login from './components/login/Login.jsx' 
 import TaskDisplay from './components/tasks/taskDisplay'
-import TaskCounter from './components/tasks/TaskCounter.jsx'
+// import TaskCounter from './components/tasks/TaskCounter.jsx'
 import Signout from "./components/login/signout.jsx"
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null)
   const [todos, setTodos] = useState([]);
+  const [completedTasks, setCompletedTasks] = useState([])
 
   const getToDos = async() =>{
     // console.log(currentUser)
@@ -22,8 +23,16 @@ function App() {
       console.log(data.todos)
       const todoData = data.todos
       // console.log(todoData)
-      setTodos(todoData); 
+      todoData.map((todo) => {
+        if (todo.complete === true) {
+          setCompletedTasks(todo)
+        }
+        else {
+          setTodos(todo)
+        }
+      }) 
       console.log(todos)
+      console.log(completedTasks)
     } catch(e) {
       console.error(e)
     }
@@ -37,11 +46,11 @@ function App() {
    return (
     <>
     <CurrentUserContext.Provider value={{currentUser, setCurrentUser}}>
-    <Header />
+    {/* <Header /> */}
     <>
     {currentUser !== null ? (
       <>
-      <TaskCounter />
+      {/* <TaskCounter todos={todos}/> */}
       <TaskDisplay todos={todos} setTodos={setTodos}/>
       <Signout />
       </>

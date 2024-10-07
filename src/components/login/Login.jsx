@@ -28,6 +28,7 @@ export default function Login() {
                 // console.log(currentUser)
             } else {
                 console.log("Invalid Username or Password")
+                //its now hitting this when you click on signup before submitting anything  
             }
         }) 
     }

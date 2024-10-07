@@ -11,8 +11,14 @@ https://zesty-yeot-8b2b8e.netlify.app/
     - be able to create your own task bins or columns and be able to drag and drop items into different columns 
 
 To satisfy the project requirements, I have also used the dummyJSON API to provide user data 
+     - to test the app - please use the following login credentials : email: emily.johnson@x.dummyjson.com, password - emilyspass
 
-due to time constraints, I was not able to implement all the things I wanted, but I am looking forward to continuing to work on this project to make it work. 
+due to time constraints, I was not able to implement all the things I wanted, but I am looking forward to continuing to work on this project to make it work. As of right now: 
+     - login works with a user from the API (signup is not working )
+     - the webpage loads the current to dos 
+     - you can add, edit, and delete todos 
+     - you can sign out 
+     (currently the completed button does not work)
 
 # Dependencies 
 this project uses to following dependencies: 
@@ -20,7 +26,10 @@ this project uses to following dependencies:
 
 # Installation 
 to install this project please follow these steps: 
-- 
+- download the project to your local envrionment 
+- cd into the project folder 
+- run npm install 
+- run npm run dev to open the server 
 
 --- below are the instructions for this project from Per Scholas --- 
 

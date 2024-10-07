@@ -3,7 +3,6 @@ import  CurrentUserContext from "../user-context"
 
 export default function Header() {
     const user = useContext(CurrentUserContext)
-    console.log(user)
     return (
     <div>
         <h1>Sticky Done</h1>

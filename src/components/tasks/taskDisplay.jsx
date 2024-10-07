@@ -6,6 +6,7 @@ export default function TaskDisplay({todos, setTodos}) {
     const [isEditing, setIsEditing] = useState(false);
     const [editText, setEditText] = useState("");
     const [editId, setEditId] = useState(null);
+    const [completed, setCompleted] = useState([])
 
     const handleInputChange = (event) => {
         setNewTodo(event.target.value);
@@ -21,13 +22,13 @@ export default function TaskDisplay({todos, setTodos}) {
         }
       };
     
-      const toggleComplete = (id) => {
-        setTodos(
-          todos.map((todo) =>
-            todo.id === id ? { ...todo, completed: !todo.completed } : todo
-          )
-        );
-      };
+    //   const setComplete = (id) => {
+    //     setTodos(
+    //       todos.map((todo) =>
+    //         todo.id === id ? { ...todo, completed: !todo.completed } : todo
+    //       )
+    //     );
+    //   };
       //need to figure out how to update this to change the item to complete, and to turn the view off
       //reach goal and add it to the counter 
 
@@ -82,7 +83,7 @@ export default function TaskDisplay({todos, setTodos}) {
                 <p>{todo.todo}</p>
                 <button onClick={() => handleEditClick(todo.id, todo.text)}>Edit</button>
                 <button onClick={() => handleDelete(index)}>Delete</button>
-                <button>Complete!</button>
+                <button onClick={() => setComplete(todo.id)}>Complete!</button>
                 </>
                 )}
             </div>
